@@ -3,8 +3,10 @@ package tn.esprit.spring.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,9 +28,8 @@ public class MaladieController {
 		return list;
 
 	}
-
 	
-	@GetMapping("/rmv-maladie")
+	@DeleteMapping("/rmv-maladie")
 	@ResponseBody
 	public void rmvFicheMedical() {
 		MaladieService.DeleteMaladie((long)2);
@@ -46,7 +47,7 @@ public class MaladieController {
 		MaladieService.AddMaladie(con);
 	}
 	
-	@GetMapping("/Edit-maladie")
+	@PutMapping("/Edit-maladie")
 	@ResponseBody
 	public void EditConsultation(long id) {
 	Maladie fiche = MaladieService.GetMaladieById(id);

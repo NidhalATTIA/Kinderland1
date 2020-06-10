@@ -20,7 +20,7 @@ import tn.esprit.spring.service.UserService;
 @Scope(value = "session")
 @Controller(value = "AccuilController")
 @ELBeanName(value = "AccuilController")
-@Join(path = "/", to = "/login.jsf")
+@Join(path = "/", to = "/login.jsf")  // @Join(path = "/", to = "/welcome.jsf")
 public class AccuilController {
 	
 	private String login;

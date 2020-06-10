@@ -6,19 +6,41 @@ xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/template.xhtml">
     
 <ui:param name="page_name" value="Connexion" />
 <ui:define name="menu">
-<h:form id="form">
-<div class = "red">Connexion</div>
-<h:panelGrid columns="2">
-<h:outputText value="Login (Email)" />
-<h:inputText value="#{AccuilController.login}" />
-<h:outputText value="Mot de passe" />
 
-<h:inputSecret value="#{AccuilController.password}" />
-<h:commandButton id="btn" value="Connexion"
-					action="#{AccuilController.doLogin()}" />
-				
-
-</h:panelGrid>
-</h:form>
+ <section class="login">
+ <div class="container">
+ 
+       <div class="banner-content">
+	   
+		  <h1><i class="fa fa-smile"></i> KinderLand</h1>
+		  <h:form id="form" class="form-signin">
+		   <h3 class="form-signin-heading">Please sign in</h3>
+		   <div class="form-group">
+		    <h:inputText value="#{AccuilController.login}" name="email" type="text" class="form-control" placeholder="Email"/>
+		   </div>
+		   <div class="form-group">
+		    <h:inputSecret value="#{AccuilController.password}"  type="password" class="form-control" name="password" placeholder="Password"/>
+		   </div>
+		  <h:commandButton id="btn" value="Sign In"
+					action="#{AccuilController.doLogin()}" class="kafe-btn kafe-btn-mint btn-block" />
+		</h:form>
+		
+       </div><!--/. banner-content -->
+      </div>
+</section>
 </ui:define>
 </ui:composition>
+
+
+	 <!-- ==============================================
+	 Header Section
+	 =============================================== -->
+
+	 
+	 
+     <!-- ==============================================
+	 Scripts
+	 =============================================== -->
+
+
+  

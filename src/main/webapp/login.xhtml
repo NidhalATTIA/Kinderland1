@@ -4,8 +4,9 @@
 xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
 xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/template.xhtml">
     
-<ui:param name="page_name" value="Connexion" />
+<ui:param name="page_name" value="Kinderland - Login" />
 <ui:define name="menu">
+<<<<<<< HEAD
 
  <section class="login">
  <div class="container">
@@ -28,6 +29,22 @@ xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/template.xhtml">
        </div><!--/. banner-content -->
       </div>
 </section>
+=======
+<h:form id="form">
+<div class = "red">-- Kinderland - Authentification --</div>
+<h:panelGrid columns="2">
+<h:outputText value="Login (Email)" />
+<h:inputText value="#{AccuilController.login}" />
+<h:outputText value="Password" />
+
+<h:inputSecret value="#{AccuilController.password}" />
+<h:commandButton id="btn" value="Log In"
+					action="#{AccuilController.doLogin()}" />
+				
+
+</h:panelGrid>
+</h:form>
+>>>>>>> 0e5cf785a0d2a39564cc63c7f4cf8a31dbf70dc5
 </ui:define>
 </ui:composition>
 

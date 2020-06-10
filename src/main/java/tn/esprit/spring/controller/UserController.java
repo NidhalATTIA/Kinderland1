@@ -20,7 +20,6 @@ import tn.esprit.spring.entity.User;
 import tn.esprit.spring.service.UserInterface;
 
 @RestController
-@Join(path = "/", to = "/welcome.jsf")
 public class UserController {
 
 	@Autowired
